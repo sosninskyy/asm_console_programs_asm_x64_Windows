@@ -18,7 +18,6 @@ encryptor:
     
     add byte[rdi + rcx], 26
     xor byte[rdi + rcx], 5
-    xor byte[rdi + rcx], 5
     inc rcx
     jmp .loop
 .end:
@@ -30,7 +29,6 @@ decryptor:
     cmp byte[rdi + rcx], 0
     je .end
     
-    xor byte[rdi + rcx], 5
     xor byte[rdi + rcx], 5
     sub byte[rdi + rcx], 26
     inc rcx
